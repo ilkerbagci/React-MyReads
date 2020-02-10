@@ -8,7 +8,7 @@ class Book extends Component {
         let isBookImageExist = true
         if (typeof book.imageLinks === 'undefined') {
             isBookImageExist = false
-        }    
+        }
         return (
             <div>
                 <div className="book">
@@ -30,7 +30,11 @@ class Book extends Component {
                         </div>
                     </div>
                     <div className="book-title">{book.title}</div>
-                    <div className="book-authors">{book.authors !== undefined ? book.authors : 'No Author'}</div>
+                    <div className="book-authors">
+                        {book.authors !== undefined
+                            ? book.authors
+                            : 'No Author'}
+                    </div>
                 </div>
             </div>
         )

@@ -58,7 +58,7 @@ class App extends React.Component {
 
   //Update book's sheld on server with API call
   updateBookShelfOnServer = (book, shelf) => {
-    BooksAPI.update(book, shelf)
+    BooksAPI.update(book, shelf).catch(error => console.log(error));
   }
 
   render() {

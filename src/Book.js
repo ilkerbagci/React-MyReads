@@ -10,7 +10,7 @@ class Book extends Component {
             isBookImageExist = false
         }
         return (
-            <div>
+            <div key={book.id}>
                 <div className="book">
                     <div className="book-top">
                         <div className="book-cover" style={{
